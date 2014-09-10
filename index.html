@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8" >
+<title>Projector Tool</title>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!--added by TYS -->
+<script src="js/toolScript.js"></script>
+<script src="js/jquery.uniform.js" type="text/javascript" charset="utf-8"></script>
+<link type="text/css" href="css/toolStyle.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/uniform.default.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/jquery.ui.all.css">
+	
+	<script src="js/jquery.ui.core.js"></script>
+	<script src="js/jquery.ui.widget.js"></script>
+
+	<script src="js/jquery.ui.mouse.js"></script>
+	<script src="js/jquery.ui.draggable.js"></script>
+	
+<style>
+#distanceSelectorWrap{
+	background-image: url('projectorToolImages/distanceinputbpx.png');
+	width:953px;
+	height: 116px;
+	margin-top: 3px;
+	position: relative;
+}
+
+#distanceEnterWrap{	width: 433px; margin: 40px 0px 20px 40px; float: left; font-family:Verdana, Geneva, sans-serif; font-size:16px; font-weight: bold; color: #555555;	}
+#distanceEnteredFeet, #distanceEnteredInch, #imageSizeEntered{ width: 60px; height: 25px; box-shadow: 2px 3px 1px #c4c4c4; color: #004776; font-size: 20px; font-weight: bold; font-family: Verdana, Geneva, sans-serif; text-align: center;	}
+#imageSizeEnterWrap{ width: 250px; margin: 40px 0px 20px 40px; float: left; font-family: Verdana, Geneva, sans-serif; font-size: 16px; font-weight:bold;color:#555555;	}
+#btnFindProjectorWrap{ width: 157px; height: 34px; margin: 40px 10px 20px 0px; float: left; border:0px; cursor: pointer;}
+    #resultBodyWrapper {
+        width: 945px;
+        border: 0px;
+    }
+    #resultMainWrapper {
+        width: 945px;
+        height: 232px;
+        position:relative;
+
+        margin-top: 20px;
+    }
+	
+	#resultMainWrapper ul{
+		margin: 0;
+	}
+	
+	
+	#resultMainWrapper li{
+		list-style: none;
+	}
+	
+	#resultMainWrapper a{
+		text-decoration: none;
+	}
+	
+    #resultDescriptionText {
+        width: 675px;
+        height: 220px;
+        float:left;
+        overflow:hidden;
+        font-family:Verdana, Geneva, sans-serif;
+        margin: 47px 0 0 40px;
+    }
+    .divider {
+        width: 566px;
+    }
+    .pBrandTitle, .pModelTitle {
+        float: left;
+        font-size:24px; 
+        color:#333; 
+        font-weight:normal;
+        height:30px;
+
+    }
+    .pBrand, .pModel{float:left; font-size:22px; color:#333; font-weight:bold; height:30px; margin-right: 70px;}
+    .learnmore {
+        width: 113px;
+        height: 30px;
+        border: 0px;
+        margin-top: 10px;
+    }
+</style>	
+
+
+
+
+	
+
+</head>
+
+<body>
+  <div id="headerWrapper">
+  	<div id="bestbuy-logo"><a href="http://bestbuy.com/" target="_blank"><img src="projectorToolImages/best-buy-images/best-buy-logo.jpg" alt="Best Buy" /></a></div>
+    <div id="bestbuy-nav"><img src="projectorToolImages/best-buy-images/best-buy-nav.jpg" border="0" usemap="#Map" />
+      <map name="Map" id="Map">
+        <area shape="rect" coords="5,2,130,40" href="http://www.bestbuy.com/site/Televisions/Projectors-Screens/pcmcat158900050008.c?id=pcmcat158900050008" target="_blank" alt="PRODUCTS" />
+        <area shape="rect" coords="135,4,249,38" href="http://www.bestbuy.com/site/Electronics/Geek-Squad/pcmcat138100050018.c?id=pcmcat138100050018" target="_blank" alt="SERVICES" />
+        <area shape="rect" coords="254,5,424,37" href="http://www.bestbuy.com/site/Global-Promotions/Special-Sale/pcmcat185700050011.c?id=pcmcat185700050011" target="_blank" alt="SHOPS &amp; DEALS" />
+        <area shape="rect" coords="433,5,513,40" href="http://www.bestbuy.com/site/Electronics/Gift-Center/abcat0010000.c?id=abcat0010000#/home" target="_blank" alt="GIFTS" />
+        <area shape="rect" coords="518,6,614,41" href="http://www.bestbuy.com/site/Global-Promotions/null/pcmcat309300050007.c?id=pcmcat309300050007" target="_blank" alt="MY BEST BUY" />
+      </map>
+    </div>
+  </div>	
+  <div id="mainWrapper">
+  	<div id="heading"><h1>PROJECTOR SIZE TOOL</h1></div>
+    <div id="genericBanner"><img src="projectorToolImages/best-buy-images/direction-banner.jpg" alt="IT´S TIME TO THINK BIGGER - Just how big can you go? Drag the projector below to learn more." /></div>
+    <div id="homeEntertainmentBanner"><img src="projectorToolImages/best-buy-images/home-entertaintment-banner2.jpg" alt="IT&acute;S TIME TO THINK BIGGER" /></div>
+    <div id="businessBanner"><img src="projectorToolImages/best-buy-images/business-projector-banner.jpg" alt="IT&acute;S TIME TO THINK BIGGER" /></div>
+    <div id="distanceSelectorWrap">
+
+    	<div id="distanceEnterWrap"><label for="distanceEnteredFeet">Distance to Screen:&nbsp;&nbsp;</label><input type="text" id="distanceEnteredFeet" name="distanceEntered" />&nbsp;&nbsp;Ft.&nbsp;&nbsp;&nbsp;<input type="text" id="distanceEnteredInch" name="distanceEnteredInch" />&nbsp;&nbsp;In.</div>
+    	<div id="imageSizeEnterWrap"><label for="imageSizeEntered">Image Size:&nbsp;&nbsp;</label><input type="text" id="imageSizeEntered" name="imageSizeEntered" />&nbsp;&nbsp;In.&nbsp;&nbsp;</div>
+    	<div id="btnFindProjectorWrap"><img src="projectorToolImages/findProjectorbtn.png" alt="FIND PROJECTORS" border="0" /></div>
+  
+   </div>
+    
+   <!-- start of projector tool-->
+   
+    
+   <div id="resultBodyWrapper">
+       <div id="resultMainWrapper">
+<!--		<ul>
+       <li>
+               <div id="projectorImageHolder"></div>
+               <div id="resultDescriptionText">
+                   <div class="pBrandTitle">Brand:&nbsp;</div><div class="pBrand">Epson</div><div class="pModelTitle">Model:&nbsp;</div><div class="pModel">PowerLite HC8350</div>
+                   <div style="clear:both;height:5px;"></div>
+                   <div class="divider"></div>
+                   <div class="pResolutionTitle">Resolution:&nbsp;</div><div class="pResolution">SVGA</div>
+                   <div style="clear:both;"></div>
+                   <div class="pCBTitle">Color Brightness:&nbsp;</div><div class="pCB">3000 lumens</div>
+                   <div style="clear:both;"></div>
+                   <div class="pWBTitle">White Brightness:&nbsp;</div><div class="pWB">3000 lumens</div>
+                   <div style="clear:both;"></div>
+                   <div class="learnmore"></div>
+               </div>
+               
+       </li>-->
+
+       </div>
+       
+   
+   </div><!--end -->
+   <div id="preload"><img src="projectorToolImages/popUpBg.png" height="1" width="1" /><img src="projectorToolImages/popUpBg2.png" height="1" width="1" /><img src="projectorToolImages/popUpCircleOn.png" height="1" width="1" /></div>
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+<!--[if IE 8]>
+  <style type="text/css">
+ 
+   
+  </style>
+<![endif]-->
+
+<!--[if IE 7]>
+  <style type="text/css">
+    div.selector span {
+       width:175px;;
+    }
+    #projectorDescriptionText ul
+    {
+    margin-left:20px;
+    }
+    .draggable {height:188px;}
+    div.selector span {
+    
+    padding :0 25px 0 0px !important;
+}
+  </style>
+<![endif]-->
+</body>
+</html>
