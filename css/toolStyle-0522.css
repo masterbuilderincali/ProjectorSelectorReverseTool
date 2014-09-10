@@ -1,0 +1,161 @@
+a {outline:none;}
+body
+{
+	background:url(../projectorToolImages/best-buy-images/tile-bg.jpg) repeat-x;
+	padding:0; margin:0;border:0;
+	font-family: Arial,Verdana,sans-serif;
+}
+h1 {
+    color: #49494A;
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+	margin:0px;
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+}
+img {border:0px}
+#preload{display:none;}
+
+#headerWrapper {
+	margin:0 auto;width:943px;text-align:center;height:128px;	
+}
+#bestbuy-logo
+{
+	margin-top:10px;height:62px;text-align:left;
+}
+#bestbuy-nav
+{
+	margin-top:10px;text-align:left;
+}
+
+
+#mainWrapper{
+ margin:auto; position:relative; width:943px; height:1362px;
+}
+#heading {height:40px;width:600px;margin-top:10px;}
+#HEBanner {width:943px; height:164px; position:relative;}
+#businessBanner {width:943px; height:164px; position:relative;display:none;}
+
+#projectorDescriptionMainWrapper {width:941px; height:auto; border:solid 1px #a9b6c4; overflow:auto;}
+
+#projectorImageHolder{position:relative; float:left; width:200px; height:120px; overflow:visible;  background-size: 200px; background-repeat:no-repeat; margin-top:70px; margin-left:30px;overflow:hidden;}
+#projectorImageHolder img {width:200px;}
+
+
+
+.bannerSubheadline {position:absolute; top:60px; left:25px; width:410px; font-family:Verdana, Geneva, sans-serif; font-size:13px; color:#000; font-weight:normal; line-height:30px;}
+.icons{position:absolute; top:45px; left:430px;}
+
+
+
+
+#projectorDescriptionText{position:relative; float:left; width:320px; height:250px; overflow:hidden;font-family:Verdana, Geneva, sans-serif;margin-left:40px;}
+.pName{position:relative; margin-top:15px;width:320px; font-weight:bold; font-size:22px; color:#555555;}
+.pHeadline{position:relative; width:320px;  font-size:16px; color:#333333;}
+#projectorDescriptionText ul{  font-size:14px; color:#333;margin-left:-23px;}
+
+#pLearnmore{position:relative; float:left; width:150px; height:37px; background:url(../projectorToolImages/plearnmore.png) no-repeat; margin-top:5px; cursor:pointer}
+.seeAllProj{position:relative; float:left; width:150px; height:37px; margin-top:15px; margin-left:5px; color:#003c64; font-weight:bold; font-family:Arial, Helvetica, sans-serif; font-size:13px;}
+.seeAllProj a:link, a:hover, a:visited{color:#003c64; text-decoration:none;}
+
+#selectProjectorWrapper {float: left;
+    font-family: Verdana,Geneva,sans-serif;
+    height: 250px;
+    margin-left: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 311px;
+	background: #ffffff; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjY2QwZDUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #ffffff 0%, #ccd0d5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ccd0d5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#ccd0d5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#ccd0d5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#ccd0d5 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#ccd0d5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ccd0d5',GradientType=0 ); /* IE6-8 */
+
+	}
+	
+.bannerSubheadline2 {position:relative; margin:0 auto; margin-top:60px; width:250px; font-family:Verdana, Geneva, sans-serif; font-size:20px; color:#000; font-weight:bold; line-height:24px; text-align:center }
+#toolDropdownWrapper {position:relative; vertical-align:middle;margin:0 auto;text-align:center;margin-left:10px; margin-top:30px;}
+#toolDropdown {width:220px;height:30px; font-family:Tahoma, Geneva, sans-serif; font-size:12px; color:#000;}
+
+#toolWrapper {position:relative;; top:10px;width:943px; height:840px; margin:auto; overflow:hidden; background:url(../projectorToolImages/bg.jpg) no-repeat;}
+
+
+#projScreenSizeCalcWrapper {position:relative;  width:943px; height:762px;top:30px;}
+#RollOverDiv {position:absolute;  width:760px; height:762px;top:0px; }
+.tv40{position:absolute; background:url(../projectorToolImages/tv.png) no-repeat; top:500px; left:130px;width:171px; height:150px;}
+.screenSizeTextBox{position:absolute; top:447px; left:480px; width:128px; height:144px; font-family:Verdana, Geneva, sans-serif; font-size:18px; font-weight:bold;text-align:center; padding-top:10px;}
+
+.screenSizeTextBoxBG{position:absolute; background:url(../projectorToolImages/pullDownBG.png) no-repeat; top:410px; left:480px; width:128px; height:144px; }
+.widthText{position:absolute; top:155px; left:455px;  width:70px; height:20px; font-family:Verdana, Geneva, sans-serif; font-size:19px; font-weight:bold;text-align:center; }
+.heightText{position:absolute; top:330px; left:165px;  width:70px; height:20px; font-family:Verdana, Geneva, sans-serif; font-size:19px; font-weight:bold;text-align:center; }
+
+#screenBox{position:relative; width:458px; height:269px; background-color:#fff; border:solid; border-width:2px; border-color:#000; margin:auto;top:217px;left:10px;} 
+.arrow3d{position:absolute; background:url(../projectorToolImages/3darrow.png) no-repeat; top:560px; left:440px; width:77px; height:224px;}
+.draggable { position:absolute; width: 120px; height: 219px;  top:560px; left:410px; cursor:pointer; padding: 0.5em;z-index:9999999999;}
+
+.onelcd{ position:relative; width: 128px; height: 72px;  margin:auto; display:none;}
+.fourlcd{ position:relative; width: 256px; height: 144px;  margin:auto; display:none;}
+.sixlcd{ position:relative; width: 375px; height: 147px;  margin:auto; display:none;}
+.ninelcd{ position:relative; width: 458px; height: 269px;  margin:auto; display:none;}
+.dragImage{position:absolute; width: 120px; height: 107px;  top:560px; left:410px; padding: 0.5em; margin:auto;}
+
+#distanceBoxBottom{background:url(../projectorToolImages/bottomTextBoxBG.png) no-repeat; width:100px; height:51px; position:absolute;top:640px;left:310px;color:#004776; font-size:19px; font-weight:bold;}
+#screenSizeBoxBottom{background:url(../projectorToolImages/bottomTextBoxBG.png) no-repeat; width:200px; height:51px; position:absolute;top:590px;left:540px;color:#004776; font-size:19px; font-weight:bold;}
+#screenSizeBoxBottom #screenCopy{color:#7e7e7e; position:absolute; left:100px;top:12px; width:90px;height:30px;}
+.textbox {position:relative; margin:auto 0; text-align:center;margin-top:12px;}
+.textbox2 {position:relative; margin:auto 0; text-align:center;margin-top:12px; margin-right:100px;;}
+option {padding-left:10px !important;}
+
+#popUp1 { position:absolute; width:270px; height:170px; top:50px;left:500px;z-index:999999;}
+#popUp1 .popUpCircle {position:absolute; left:0px; top:125px; background:url(../projectorToolImages/popUpCircle.png) no-repeat; width:36px; height:34px;cursor:pointer; display:block;}
+#popUp1 .popUpCircleOn {position:absolute; left:0px; top:125px; background:url(../projectorToolImages/popUpCircleOn.png) no-repeat; width:36px; height:34px;cursor:pointer;display:none;}
+#popUp1 .popUpContent{position:absolute; top:3px;left:10px; background:url(../projectorToolImages/popUpBg.png) no-repeat; width:233px; height:158px; font-family:Verdana, Geneva, sans-serif; color:#fff; display:none;}
+#popUp1 .content{width:180px;padding-top:25px; padding-left:30px;}
+#popUp1 .popUpContent .content h2{font-size:13px; font-weight:bold;}
+#popUp1 .popUpContent .content span{font-size:11px; font-weight:normal; line-height:15px;}
+
+#popUp2 { position:absolute; width:270px; height:170px; top:370px;left:580px;z-index:999999;}
+#popUp2 .popUpCircle {position:absolute; left:0px; top:125px; background:url(../projectorToolImages/popUpCircle.png) no-repeat; width:36px; height:34px;cursor:pointer;display:block;}
+#popUp2 .popUpCircleOn {position:absolute; left:0px; top:125px; background:url(../projectorToolImages/popUpCircleOn.png) no-repeat; width:36px; height:34px;cursor:pointer;display:none;}
+#popUp2 .popUpContent{position:absolute; top:3px;left:10px; background:url(../projectorToolImages/popUpBg.png) no-repeat; width:233px; height:158px; font-family:Verdana, Geneva, sans-serif; color:#fff; display:none;}
+#popUp2 .content{width:180px;padding-top:25px; padding-left:30px;}
+#popUp2 .popUpContent .content h2{font-size:13px; font-weight:bold;}
+#popUp2 .popUpContent .content span{font-size:11px; font-weight:normal; line-height:15px;}
+
+
+#popUp3 { position:absolute; width:270px; height:170px; top:330px;left:310px;z-index:999999;}
+#popUp3 .popUpCircle {position:absolute; left:0px; top:190px; background:url(../projectorToolImages/popUpCircle.png) no-repeat; width:36px; height:34px;cursor:pointer;display:block;}
+#popUp3 .popUpCircleOn {position:absolute; left:0px; top:190px; background:url(../projectorToolImages/popUpCircleOn.png) no-repeat; width:36px; height:34px;cursor:pointer;display:none;}
+#popUp3 .popUpContent{position:absolute; top:3px;left:10px; background:url(../projectorToolImages/popUpBg2.png) no-repeat; width:256px; height:240px; font-family:Verdana, Geneva, sans-serif; color:#fff; display:none;}
+#popUp3 .content{width:195px;padding-top:15px; padding-left:30px;}
+#popUp3 .popUpContent .content h2{font-size:13px; font-weight:bold;}
+#popUp3 .popUpContent .content span{font-size:11px; font-weight:normal; line-height:15px;}
+
+#popUp4 { position:absolute; width:270px; height:170px; top:150px;left:700px;z-index:999999;}
+#popUp4 .popUpCircle {position:absolute; left:0px; top:125px; background:url(../projectorToolImages/popUpCircle.png) no-repeat; width:36px; height:34px;cursor:pointer; display:block;}
+#popUp4 .popUpCircleOn {position:absolute; left:0px; top:125px; background:url(../projectorToolImages/popUpCircleOn.png) no-repeat; width:36px; height:34px;cursor:pointer;display:none;}
+#popUp4 .popUpContent{position:absolute; top:3px;left:10px; background:url(../projectorToolImages/popUpBg.png) no-repeat; width:233px; height:158px; font-family:Verdana, Geneva, sans-serif; color:#fff; display:none;}
+#popUp4 .content{width:180px;padding-top:25px; padding-left:30px;}
+#popUp4 .popUpContent .content span{font-size:11px; font-weight:normal; line-height:15px;}
+
+#sizeBox {width:658px; height:90px; background:url(../projectorToolImages/boxbg.png) no-repeat;position:absolute;top:2px; left:140px;}
+#sizeBoxMain{position:relative;float:left; left:240px; width:300px;top:15px;font-family:Verdana, Geneva, sans-serif; font-weight:bold; font-size:16px; color:#333}
+
+#boxSizeText{position:relative; float:left;}
+#sizeBoxtimes{position:relative;float:left; left:265px; top:10px; width:80px; Height:64px; font-family:Verdana, Geneva, sans-serif; font-weight:bold; font-size:50px; color:#fff;}
+
+.distanceTextBox{position:absolute; top:39px; left:210px; width:128px; height:144px; font-family:Verdana, Geneva, sans-serif; font-weight:bold; font-size:18px; color:#003c64}
+.distanceTextBoxType{position:absolute; top:17px; left:160px; width:200px; height:144px; font-family:Verdana, Geneva, sans-serif; font-weight:bold; font-size:16px; color:#333; line-height:22px;}
+#legal {font-size:10px; color:#333; position:relative; margin-top:10px;height:100px;}
+div.selector span {
+    
+    padding :0 35px 0 20px !important;
+}
+div.selector {font-size:13px !important;}
