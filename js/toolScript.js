@@ -3,10 +3,12 @@
 		 $(document).ready(function () {
 			
 			ReadXML();
+			
 			//popupInit();
 			//$("#draggable5").css("top", "80px");
 			//$(".dragImage").css("top", "660px");
 			$("#btnFindProjectorWrap").click(function() {
+				
 			  $("#resultMainWrapper").empty();
 			  
 			  throwRatioTempMax = throwRatioArray[0].firstChild.nodeValue;
@@ -18,7 +20,7 @@
 			  // get the user input distance inch and feet
 			  distanceFeet = parseInt(document.getElementById("distanceEnteredFeet").value, 10);
 			  distanceInch = parseInt(document.getElementById("distanceEnteredInch").value, 10);
-			  
+			 
 	
 			 // validate form inputs
 			 if( document.getElementById("distanceEnteredFeet").value == "" && document.getElementById("distanceEnteredInch").value == "", document.getElementById("imageSizeEntered").value == "")
@@ -38,12 +40,14 @@
 	
 			  //get the screensize
 			  screenSizeInch = parseInt(document.getElementById("imageSizeEntered").value,10);
-			 
+			  
 	
 			  // get throwratio by calculation
 			  throwRatioInSearch = totalDistance / screenSizeInch;
 			  
 			  throwRatioInSearch = Math.round(throwRatioInSearch*100)/100;
+			  
+			  
 			
 			//alert(throwRatioInSearch)
 			//alert(throwRatioArray.length)
@@ -70,7 +74,7 @@
 			}
 			//alert(count)
 			
-			if(count == 0 || throwRatioinSearch.value == ""){
+			if(count == 0 || throwRatioInSearch.value == ""){
 				var noResultFoundHTML = "<h3>The data you entered doesn't match any projectors</h3>"
 				$("#resultMainWrapper").html(noResultFoundHTML); 
 			}
@@ -81,6 +85,7 @@
 			
 			for(i=0; i<count; i++)
 			{
+				//alert(tempIndex)
 				tempIndex = projectorResultArray[i];
 				$("#resultMainWrapper").append('<li><div id="projectorImageHolder"><img src="'+projectorImagePathArray[tempIndex].firstChild.nodeValue+'" /></div><div id="resultDescriptionText"><div class="pBrandTitle">Brand:&nbsp;</div><div class="pBrand">'+projectorBrandArray[tempIndex].firstChild.nodeValue+'</div><div class="pModelTitle">Model:&nbsp;</div><div class="pModel">'+projectorModelArray[tempIndex].firstChild.nodeValue+'</div><div style="clear:both;height:5px;"></div><div class="divider"></div><div class="pResolutionTitle">Resolution:&nbsp;</div><div class="pResolution">'+projectorResolutionArray[tempIndex].firstChild.nodeValue+'</div><div style="clear:both;"></div><div class="pCBTitle">Color Brightness:&nbsp;</div><div class="pCB">'+projectorCBArray[tempIndex].firstChild.nodeValue+'</div><div style="clear:both;"></div><div class="pWBTitle">White Brightness:&nbsp;</div><div class="pWB">'+projectorWBArray[tempIndex].firstChild.nodeValue+'</div><div style="clear:both;"></div><div class="learnmore"><a href="'+projectorLearnmoreArray[tempIndex].firstChild.nodeValue+'" target="_blank"><img src="projectorToolImages/plearnmore.png" border="0" width="150" height="37" alt="Learn More"></a></div></div></li>');
 	
@@ -133,11 +138,9 @@ var screenHeightFeet;
 
 function ReadXML(){
 	//alert(markersArray.length);
-	
-	
-	
+
       // Read the data from example.xml
-      downloadUrl("xml/projectorTool.xml", function(doc) {
+      downloadUrl("xml/projectorToolReverse.xml", function(doc) {
         var xmlDoc = xmlParse(doc);
 		projectorBrandArray = xmlDoc.getElementsByTagName("brand");
 		projectorModelArray = xmlDoc.getElementsByTagName("model");
