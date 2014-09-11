@@ -30,17 +30,19 @@
 			 if (document.getElementById("distanceEnteredFeet").value == ""){
 				 distanceFeet = 0;
 			 }
-			 if (document.getElementById("imageSizeEntered").value == ""){
+			 if (document.getElementById("distanceEnteredInch").value == ""){
 				 distanceInch = 0;
 			 }
 
+			//	alert(distanceFeet)
+			//	alert(distanceInch)
 
 			  //calculate total distance
 			  totalDistance = distanceFeet * 12 + distanceInch;
 	
 			  //get the screensize
 			  screenSizeInch = parseInt(document.getElementById("imageSizeEntered").value,10);
-			  
+			  //alert(screenSizeInch)
 	
 			  // get throwratio by calculation
 			  throwRatioInSearch = totalDistance / screenSizeInch;
@@ -56,11 +58,10 @@
 			var count=0;
 			
 			// grab index and put them in an array
-
+			//alert(throwRatioArray[0].firstChild.data)
 			for(i=0; i<throwRatioArray.length; i++)
 			{
-				//alert("j="+j)
-					if (throwRatioInSearch <= throwRatioArray[i].innerHTML && throwRatioInSearch > throwRatioMinArray[i].innerHTML)
+					if (throwRatioInSearch <= throwRatioArray[i].firstChild.data && throwRatioInSearch > throwRatioMinArray[i].firstChild.data)
 					{
 							projectorResultArray[j] = i;								
 							count++;
@@ -73,8 +74,11 @@
 					}
 			}
 			//alert(count)
+			//alert(throwRatioInSearch)
 			
 			if(count == 0 || throwRatioInSearch.value == ""){
+			
+
 				var noResultFoundHTML = "<h3>The data you entered doesn't match any projectors</h3>"
 				$("#resultMainWrapper").html(noResultFoundHTML); 
 			}
@@ -83,17 +87,28 @@
 
 			$("#resultMainWrapper").append('<ul>');
 			
-			for(i=0; i<count; i++)
-			{
-				//alert(tempIndex)
-				tempIndex = projectorResultArray[i];
-				$("#resultMainWrapper").append('<li><div id="projectorImageHolder"><img src="'+projectorImagePathArray[tempIndex].firstChild.nodeValue+'" /></div><div id="resultDescriptionText"><div class="pBrandTitle">Brand:&nbsp;</div><div class="pBrand">'+projectorBrandArray[tempIndex].firstChild.nodeValue+'</div><div class="pModelTitle">Model:&nbsp;</div><div class="pModel">'+projectorModelArray[tempIndex].firstChild.nodeValue+'</div><div style="clear:both;height:5px;"></div><div class="divider"></div><div class="pResolutionTitle">Resolution:&nbsp;</div><div class="pResolution">'+projectorResolutionArray[tempIndex].firstChild.nodeValue+'</div><div style="clear:both;"></div><div class="pCBTitle">Color Brightness:&nbsp;</div><div class="pCB">'+projectorCBArray[tempIndex].firstChild.nodeValue+'</div><div style="clear:both;"></div><div class="pWBTitle">White Brightness:&nbsp;</div><div class="pWB">'+projectorWBArray[tempIndex].firstChild.nodeValue+'</div><div style="clear:both;"></div><div class="learnmore"><a href="'+projectorLearnmoreArray[tempIndex].firstChild.nodeValue+'" target="_blank"><img src="projectorToolImages/plearnmore.png" border="0" width="150" height="37" alt="Learn More"></a></div></div></li>');
-	
+			if (count == 1){
+					tempIndex = projectorResultArray[0];
+					
+					$("#resultMainWrapper").append('<li><div id="projectorImageHolder"><img src="'+projectorImagePathArray[tempIndex].firstChild.nodeValue+'" /></div><div id="resultDescriptionText"><div class="pBrandTitle">Brand:&nbsp;</div><div class="pBrand">'+projectorBrandArray[tempIndex].firstChild.nodeValue+'</div><div class="pModelTitle">Model:&nbsp;</div><div class="pModel">'+projectorModelArray[tempIndex].firstChild.nodeValue+'</div><div style="clear:both;height:5px;"></div><div class="divider"></div><div class="pResolutionTitle">Resolution:&nbsp;</div><div class="pResolution">'+projectorResolutionArray[tempIndex].firstChild.nodeValue+'</div><div style="clear:both;"></div><div class="pCBTitle">Color Brightness:&nbsp;</div><div class="pCB">'+projectorCBArray[tempIndex].firstChild.nodeValue+'</div><div style="clear:both;"></div><div class="pWBTitle">White Brightness:&nbsp;</div><div class="pWB">'+projectorWBArray[tempIndex].firstChild.nodeValue+'</div><div style="clear:both;"></div><div class="learnmore"><a href="'+projectorLearnmoreArray[tempIndex].firstChild.nodeValue+'" target="_blank"><img src="projectorToolImages/plearnmore.png" border="0" width="150" height="37" alt="Learn More"></a></div></div></li>');
 			}
-			$("#resultMainWrapper").append('</ul>');
+			else if(count != 0){
+				//	$("#resultMainWrapper").append('<div style="clear:both"></div>');
+					
+					for(i=0; i<count; i++)
+					{
+						//alert(tempIndex)
+						tempIndex = projectorResultArray[i];
+						$("#resultMainWrapper").append('<li><div id="projectorImageHolder"><img src="'+projectorImagePathArray[tempIndex].firstChild.nodeValue+'" /></div><div id="resultDescriptionText"><div class="pBrandTitle">Brand:&nbsp;</div><div class="pBrand">'+projectorBrandArray[tempIndex].firstChild.nodeValue+'</div><div class="pModelTitle">Model:&nbsp;</div><div class="pModel">'+projectorModelArray[tempIndex].firstChild.nodeValue+'</div><div style="clear:both;height:5px;"></div><div class="divider"></div><div class="pResolutionTitle">Resolution:&nbsp;</div><div class="pResolution">'+projectorResolutionArray[tempIndex].firstChild.nodeValue+'</div><div style="clear:both;"></div><div class="pCBTitle">Color Brightness:&nbsp;</div><div class="pCB">'+projectorCBArray[tempIndex].firstChild.nodeValue+'</div><div style="clear:both;"></div><div class="pWBTitle">White Brightness:&nbsp;</div><div class="pWB">'+projectorWBArray[tempIndex].firstChild.nodeValue+'</div><div style="clear:both;"></div><div class="learnmore"><a href="'+projectorLearnmoreArray[tempIndex].firstChild.nodeValue+'" target="_blank"><img src="projectorToolImages/plearnmore.png" border="0" width="150" height="37" alt="Learn More"></a></div></div><div class="divider-long"></div></li>');
 			
-			  
-			});
+					}
+			
+			
+					$("#resultMainWrapper").append('</ul>');
+					$("#resultMainWrapper").append('<div id="sc-footer">*Compared to leading 1-chip DLP business and education projectors based on NPD data, July 2011 through June 2012. Color brightness (color light output) measured in accordance with IDMS 15.4. Color brightness will vary depending on usage conditions.</div>');
+			
+			}
+});
 			
 			
 		
@@ -138,7 +153,9 @@ var screenHeightFeet;
 
 function ReadXML(){
 	//alert(markersArray.length);
-
+	
+	
+	
       // Read the data from example.xml
       downloadUrl("xml/projectorToolReverse.xml", function(doc) {
         var xmlDoc = xmlParse(doc);
